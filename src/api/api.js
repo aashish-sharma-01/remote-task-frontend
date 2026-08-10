@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 // ---- Auth token handling ----
 // Token is kept in memory + localStorage so it survives a page refresh
 let authToken = localStorage.getItem('syncpulse_token') || null;
